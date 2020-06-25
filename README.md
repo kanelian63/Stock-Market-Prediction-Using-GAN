@@ -16,6 +16,13 @@ It is an index that can compare whether the previous day's stock price and the c
 
 전일의 주가와 현재의 주가를 비교분석하여 상승하였는지, 하락하였는지를 측정하고 주식이 매수세가 강한지 매도세가 강하지를 파악할 수 있는 지표이다. 예를 들어 현재 주가가 전일의 주가보다 상승하였다면 이것은 매수세력이 강하게 되며 ADX의 상승으로 표현할 수 있다.
 
+# Turn Over
+The turnover ratio of a stock is a measure of sellers versus buyers of a particular stock. It is calculated by dividing the daily volume of a stock by the "float" of a stock, which is the number of shares available for sale by the general trading public. A high daily volume and low float will result in a relatively high turnover ratio, whereas a low daily volume and high float will produce a relatively low turnover ratio.
+
+주식의 턴오버 비율은 특정 주식의 판매와 구매의 비율을 측정 한 것입니다. 주식의 일일 거래량을 일반 거래 대중이 판매 할 수있는 주식 수인 주식의 "플로트"로 나눈 값입니다. 일일 볼륨이 높고 플로트가 낮으면 회전율이 상대적으로 높고, 일수가 낮고 플로트가 높으면 회전율이 상대적으로 낮습니다.
+
+
+
 # Install Ta_lib
 https://www.lfd.uci.edu/~gohlke/pythonlibs/#ta-lib
 
