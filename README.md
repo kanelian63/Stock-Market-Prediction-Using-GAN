@@ -21,7 +21,14 @@ The turnover ratio of a stock is a measure of sellers versus buyers of a particu
 
 주식의 턴오버 비율은 특정 주식의 판매와 구매의 비율을 측정 한 것입니다. 주식의 일일 거래량을 일반 거래 대중이 판매 할 수있는 주식 수인 주식의 "플로트"로 나눈 값입니다. 일일 볼륨이 높고 플로트가 낮으면 회전율이 상대적으로 높고, 일수가 낮고 플로트가 높으면 회전율이 상대적으로 낮습니다.
 
-
+#
+#
+#
+#
+#
+# 1D CNN
+# GAN
+# LSTM
 
 # Install Ta_lib
 https://www.lfd.uci.edu/~gohlke/pythonlibs/#ta-lib
