@@ -374,7 +374,7 @@ G_data = []
 num_epochs = 1
 
 lamda_adv = 0.01
-lamda_p = 0.8
+lamda_p = 20
 lamda_dpl = 0.8
 
 fake_label = torch.tensor([0], dtype=torch.float).cuda()
