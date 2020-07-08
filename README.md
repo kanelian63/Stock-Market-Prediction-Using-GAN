@@ -5,16 +5,13 @@ Stock Market Prediction on High-Frequency Data Using Generative Adversarial Nets
 ![Architecture](https://user-images.githubusercontent.com/59387983/86938770-be88dc80-c17b-11ea-816b-17bd62675660.PNG)
 
 # Models
-총 3가지의 모델을 활용하였으며, Sequential Data를 다루기 위한 LSTM과 1D CNN, 그리고 LSTM을 학습시키기 위해 GAN을 활용하였다.
+총 3가지의 모델을 활용하였으며, Sequential Data를 다루기 위한 LSTM과 1D CNN, 그리고 LSTM을 학습시키기 위해 GAN을 활용하였다. 각 모델의 사용법 및 특징은 Pytorch Tutorial 링크로 대신 하겠다.
 
-각 모델의 사용법 및 특징은 Pytorch Tutorial로 대신 하겠다.
+1D CNN : https://pytorch.org/docs/master/generated/torch.nn.Conv1d.html
 
-# 1D CNN
-https://pytorch.org/docs/master/generated/torch.nn.Conv1d.html
-# GAN
-https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html
-# LSTM
-https://pytorch.org/docs/master/generated/torch.nn.LSTM.html
+GAN : https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html
+
+LSTM : https://pytorch.org/docs/master/generated/torch.nn.LSTM.html
 
 # Data
 Advanced Micro Devices 사의 1980-03-17부터 2020-06-30까지의 총 10160일 동안의 주식 일봉 데이터를 FinanceDataReader을 이용하여 활용하였다.
