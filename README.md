@@ -14,9 +14,7 @@ GAN : https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html
 LSTM : https://pytorch.org/docs/master/generated/torch.nn.LSTM.html
 
 # Data
-Advanced Micro Devices 사의 1980-03-17부터 2020-06-30까지의 총 10160일 동안의 주식 일봉 데이터를 FinanceDataReader을 이용하여 활용하였다.
-
-논문에서 활용하는 Channel은 총 13개이고, 다음과 같다.
+Advanced Micro Devices 사의 1980-03-17부터 2020-06-30까지의 총 10160일 동안의 주식 일봉 데이터를 FinanceDataReader을 이용하여 활용하였다. 논문에서 활용하는 Channel은 총 13개이고, 다음과 같다.
 
 ![indicators](https://user-images.githubusercontent.com/59387983/86939182-37883400-c17c-11ea-9c68-9a86d20fd9ee.PNG)
 
