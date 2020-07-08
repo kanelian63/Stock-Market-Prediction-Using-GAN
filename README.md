@@ -47,15 +47,25 @@ Sequence Length(time step)는 120일로 하였고 119일이 train_data, 120일�
 1. 119일치의 데이터를 
 논문에서 특이한 점은 일반적인 GAN의 Loss와 다르게 Generator Loss의 경우, Stock Data의 학습에 맞게 변경하였다.
 1. 일반적인 Generator의 Loss이다.
+
 ![L_adv](https://user-images.githubusercontent.com/59387983/86940309-9ac69600-c17d-11ea-81d9-0270df012a6a.PNG)
+
 2. Discriminator가 학습하는데 혼란을 주기 위한 Loss이다.
+
 ![Lp_loss](https://user-images.githubusercontent.com/59387983/86940306-9a2dff80-c17d-11ea-8d5b-03e7e666b33c.PNG)
+
 3. Stock 가격의 방향성을 변수로 주기 위한 Loss이다.
+
 ![L_dpl](https://user-images.githubusercontent.com/59387983/86940301-99956900-c17d-11ea-97d3-ae257f337ec6.PNG)
+
 4. Generator의 Loss
+
 ![L_G](https://user-images.githubusercontent.com/59387983/86940626-03157780-c17e-11ea-8a97-020a217f4a6b.PNG)
+
 Lamda_adv, Lamda_p, and Lamda_dpl는 이전의 기울기 파라미터들로 정의된다고 논문에서는 언급되어있다. 하지만 구체적인 언급은 없어서 일단은 세가지 Loss의 크기를 균일하게 하는 방향으로 값을 설정하였다. 이 값들도 가중치 갱신으로 자동으로 모델에서 학습되게 해놓았다고 이해하고 있지만, 다음에 시간이 되면 하겠다.
+
 5. 실제 하드코딩으로 구현한 Losses
+
 ![losses for generator](https://user-images.githubusercontent.com/59387983/86941199-a2d30580-c17e-11ea-86c8-68a2f572ee4d.PNG)
 
 
