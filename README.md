@@ -38,6 +38,11 @@ Columns = ['Close','Open','High','Low','Volume','Change','bb_upper','bb_middle',
 
 Sequence Length(time step)는 120일로 하였고 119일이 train_data, 120일째가 label이다. train_dataset의 batch는 7740이고, test_dataset의 batch는 1984이다.
 
+# Data Preprocessing
+![df_amd_total](https://user-images.githubusercontent.com/59387983/86942768-82a44600-c180-11ea-9ffe-38aa8f94fb4a.PNG)
+
+해당 df에서는 아직 정규화는 하지 않았지만, 코드에서 모든 값을 각 Channel별로 0 ~ 1 사이로 정규화하였다.
+
 # Training Point
 1. 119일치의 데이터를 
 논문에서 특이한 점은 일반적인 GAN의 Loss와 다르게 Generator Loss의 경우, Stock Data의 학습에 맞게 변경하였다.
@@ -59,17 +64,15 @@ Sequence Length(time step)는 120일로 하였고 119일이 train_data, 120일�
 
 Lamda_adv, Lamda_p, and Lamda_dpl는 이전의 기울기 파라미터들로 정의된다고 논문에서는 언급되어있다. 하지만 구체적인 언급은 없어서 일단은 세가지 Loss의 크기를 균일하게 하는 방향으로 값을 설정하였다. 이 값들도 가중치 갱신으로 자동으로 모델에서 학습되게 해놓았다고 이해하고 있지만, 다음에 시간이 되면 하겠다.
 
-5. 실제 하드코딩으로 구현한 Losses
-
-![losses for generator](https://user-images.githubusercontent.com/59387983/86941199-a2d30580-c17e-11ea-86c8-68a2f572ee4d.PNG)
-
-# train_G
+# train_G Implementation
 ![train_G](https://user-images.githubusercontent.com/59387983/86941960-884d5c00-c17f-11ea-8cda-9b969ac9ed4b.PNG)
-# train_D
+
+# train_D Implementation
 ![train_D](https://user-images.githubusercontent.com/59387983/86941964-897e8900-c17f-11ea-9b8b-02c823e6678e.PNG)
 
 # training result
 ![training](https://user-images.githubusercontent.com/59387983/86942389-0b6eb200-c180-11ea-868e-b55e356e329f.png)
+
 Discriminator의 Loss이다. 수렴하지 않는다. 이상태로 학습이 불가능하다.
 
 # Install Ta_lib
