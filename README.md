@@ -67,9 +67,16 @@ Lamda_adv, Lamda_p, and Lamda_dpl는 이전의 기울기 파라미터들로 정�
 ![train_D](https://user-images.githubusercontent.com/59387983/86941964-897e8900-c17f-11ea-9b8b-02c823e6678e.PNG)
 
 # training result
-![training](https://user-images.githubusercontent.com/59387983/86942389-0b6eb200-c180-11ea-868e-b55e356e329f.png)
+![training](https://user-images.githubusercontent.com/59387983/86981220-eea69e80-c1c0-11ea-8296-be70de87e35c.png)
 
-Discriminator의 Loss이다. 수렴하지 않는다. 이상태로 학습이 불가능하다.
+학습 과정을 보기위해 고작 1에폭이지만 결과를 시각화 해보았고, Generator의 Loss이다.
+
+GAN으로 이미지를 생성하는 경우, G의 Loss는 생성된 이미지의 결과와 정확하게 비례하지 않는다. 하지만 이 논문에서 G의 Loss를 안정적으로 수렴시키기 위해 여러 기법을 사용했다.
+
+continuous data이고, Sequential data이다. 이 경우에 G의 Loss가 결과물과 어떤 상관관계를 갖는지에 대해 알고 있지 못하다. Discriminator의 Loss는 발산하거나 수렴한다. 의미가 없다.
+
+조금 지쳤다. 제대로 된 시각화는 추후에 하겠다.
+
 
 # Install Ta_lib
 https://www.lfd.uci.edu/~gohlke/pythonlibs/#ta-lib
