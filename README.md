@@ -18,11 +18,7 @@ Advanced Micro Devices 사의 1980-03-17부터 2020-06-30까지의 총 10160일 
 
 ![indicators](https://user-images.githubusercontent.com/59387983/86939182-37883400-c17c-11ea-9c68-9a86d20fd9ee.PNG)
 
-논문에서 활용한 지표 중, 몇개의 경우 구체적인 언급이 없었기 때문에 활용할 수 없었다.
-
-따라서 구글링을 통해서 주로 사용되는 신뢰성 있는 지표들을 찾아 FinanceDataReader 패키지를 활용하여 출력하였다.
-
-기본적인 5개의 지표를 제외하고 활용한 지표는 다음과 같다.
+논문에서 활용한 지표 중, 몇개의 경우 구체적인 언급이 없었기 때문에 활용할 수 없었다. 따라서 구글링을 통해서 주로 사용되는 신뢰성 있는 지표들을 찾아 FinanceDataReader 패키지를 활용하여 출력하였다. 기본적인 5개의 지표를 제외하고 활용한 지표는 다음과 같다.
 
 1. Bollingerbands
 2. Directionalmovementindex
