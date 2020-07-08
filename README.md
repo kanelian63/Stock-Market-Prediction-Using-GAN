@@ -68,6 +68,10 @@ Lamda_adv, Lamda_p, and Lamda_dpl는 이전의 기울기 파라미터들로 정�
 # train_D
 ![train_D](https://user-images.githubusercontent.com/59387983/86941964-897e8900-c17f-11ea-9b8b-02c823e6678e.PNG)
 
+# training result
+![training](https://user-images.githubusercontent.com/59387983/86942389-0b6eb200-c180-11ea-868e-b55e356e329f.png)
+Discriminator의 Loss이다. 수렴하지 않는다. 이상태로 학습이 불가능하다.
+
 # Install Ta_lib
 https://www.lfd.uci.edu/~gohlke/pythonlibs/#ta-lib
 
