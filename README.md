@@ -44,8 +44,8 @@ Sequence Length(time step)는 120일로 하였고 119일이 train_data, 120일�
 해당 df에서는 아직 정규화는 하지 않았지만, 코드에서 모든 값을 각 Channel별로 0 ~ 1 사이로 정규화하였다.
 
 # Training Point
-1. 119일치의 데이터를 
 논문에서 특이한 점은 일반적인 GAN의 Loss와 다르게 Generator Loss의 경우, Stock Data의 학습에 맞게 변경하였다.
+
 1. 일반적인 Generator의 Loss이다.
 
 ![L_adv](https://user-images.githubusercontent.com/59387983/86940309-9ac69600-c17d-11ea-81d9-0270df012a6a.PNG)
