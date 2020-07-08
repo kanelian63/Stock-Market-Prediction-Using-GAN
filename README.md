@@ -17,13 +17,13 @@ https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html
 https://pytorch.org/docs/master/generated/torch.nn.LSTM.html
 
 # Data
-Advanced Micro Devices 사의 1980-03-17부터 2020-06-30까지의 총 10160일 동안의 주식 일봉 데이터를 활용하였다.
+Advanced Micro Devices 사의 1980-03-17부터 2020-06-30까지의 총 10160일 동안의 주식 일봉 데이터를 FinanceDataReader을 이용하여 활용하였다.
 
 논문에서 활용하는 Channel은 총 13개이고, 다음과 같다.
 
-![indicators](https://user-images.githubusercontent.com/59387983/86938775-c052a000-c17b-11ea-9acf-c77a624abdd2.PNG)
+![indicators](https://user-images.githubusercontent.com/59387983/86939182-37883400-c17c-11ea-9c68-9a86d20fd9ee.PNG)
 
-논문에서 활용한 지표 중, 몇개의 경우 구체적인 언급이 없어 따로 하이퍼파라미터를 찾아서 입력해주었다.
+논문에서 활용한 지표 중, 몇개의 경우 구체적인 언급이 없었기 때문에 활용할 수 없었다.
 
 따라서 구글링을 통해서 주로 사용되는 신뢰성 있는 지표들을 찾아 FinanceDataReader 패키지를 활용하여 출력하였다.
 
@@ -38,15 +38,25 @@ Advanced Micro Devices 사의 1980-03-17부터 2020-06-30까지의 총 10160일 
 7. Relativestrengthindex
 
 다수의 데이터를 출력하는 지표가 있기에 출력하여 활용한 Channel은 총 18개이며 다음과 같다.
-['Close','Open','High','Low','Volume','Change','bb_upper','bb_middle','bb_lower','dx','ema','slowk','slowd','ma5','macd','macdsignal','macdhist','rsi']
 
+Columns = ['Close','Open','High','Low','Volume','Change','bb_upper','bb_middle','bb_lower','dx','ema','slowk','slowd','ma5','macd','macdsignal','macdhist','rsi']
 
+Sequence Length(time step)는 120일로 하였고 119일이 train_data, 120일째가 label이다. train_dataset의 batch는 7740이고, test_dataset의 batch는 1984이다.
 
-
-
-
-Sequence Length(time step)는 120일로 하였고, train_dataset의 batch는 7740이고, test_dataset의 batch는 1984이다.
-
+# Training Point
+1. 119일치의 데이터를 
+논문에서 특이한 점은 일반적인 GAN의 Loss와 다르게 Generator Loss의 경우, Stock Data의 학습에 맞게 변경하였다.
+1. 일반적인 Generator의 Loss이다.
+![L_adv](https://user-images.githubusercontent.com/59387983/86940309-9ac69600-c17d-11ea-81d9-0270df012a6a.PNG)
+2. Discriminator가 학습하는데 혼란을 주기 위한 Loss이다.
+![Lp_loss](https://user-images.githubusercontent.com/59387983/86940306-9a2dff80-c17d-11ea-8d5b-03e7e666b33c.PNG)
+3. Stock 가격의 방향성을 변수로 주기 위한 Loss이다.
+![L_dpl](https://user-images.githubusercontent.com/59387983/86940301-99956900-c17d-11ea-97d3-ae257f337ec6.PNG)
+4. Generator의 Loss
+![L_G](https://user-images.githubusercontent.com/59387983/86940626-03157780-c17e-11ea-8a97-020a217f4a6b.PNG)
+Lamda_adv, Lamda_p, and Lamda_dpl는 이전의 기울기 파라미터들로 정의된다고 논문에서는 언급되어있다. 하지만 구체적인 언급은 없어서 일단은 세가지 Loss의 크기를 균일하게 하는 방향으로 값을 설정하였다. 이 값들도 가중치 갱신으로 자동으로 모델에서 학습되게 해놓았다고 이해하고 있지만, 다음에 시간이 되면 하겠다.
+5. 실제 하드코딩으로 구현한 Losses
+![losses for generator](https://user-images.githubusercontent.com/59387983/86941199-a2d30580-c17e-11ea-86c8-68a2f572ee4d.PNG)
 
 
 # Install Ta_lib
