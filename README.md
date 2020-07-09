@@ -32,7 +32,7 @@ Advanced Micro Devices 사의 1980-03-17부터 2020-06-30까지의 총 10160일 
 
 Columns = ['Close','Open','High','Low','Volume','Change','bb_upper','bb_middle','bb_lower','dx','ema','slowk','slowd','ma5','macd','macdsignal','macdhist','rsi']
 
-Sequence Length(time step)는 120일로 하였고 119일이 train_data, 120일째가 label이다. train_dataset의 batch는 7740이고, test_dataset의 batch는 1984이다.
+Sequence Length(time step)는 120일로 하였고 119일이 train_data, 120일째가 label이다. train_dataset의 batch는 7740이고, test_dataset의 batch는 1984이다. GAN 모델에서는 test가 의미가 없긴 하지만 LSTM 모델을 돌려보고 바로 GAN을 추가적으로 적용했기에 GAN에서 test 변수를 따로 활용하진 않았다.
 
 # Data Preprocessing
 ![df_amd_total](https://user-images.githubusercontent.com/59387983/86942768-82a44600-c180-11ea-9ffe-38aa8f94fb4a.PNG)
