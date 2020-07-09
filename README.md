@@ -54,7 +54,7 @@ Sequence Length(time step)는 120일로 하였고 119일이 train_data, 120일�
 
 ![L_dpl](https://user-images.githubusercontent.com/59387983/86940301-99956900-c17d-11ea-97d3-ae257f337ec6.PNG)
 
-4. Generator의 Loss
+4. 논문에서 구현하고자 하는 Generator의 Loss이다.
 
 ![L_G](https://user-images.githubusercontent.com/59387983/86940626-03157780-c17e-11ea-8a97-020a217f4a6b.PNG)
 
