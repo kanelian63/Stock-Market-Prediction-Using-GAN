@@ -1,5 +1,6 @@
 # Stock-Market-Prediction-Using-GAN
 Stock Market Prediction on High-Frequency Data Using Generative Adversarial Nets
+논문만 보고 혼자 구현한 최초의 모델.. 정말 엉망이지만 처음부터 끝까지 혼자서 전처리, 모델링, 훈련까지 다한 모델..
 
 # Architecture
 ![Architecture](https://user-images.githubusercontent.com/59387983/86938770-be88dc80-c17b-11ea-816b-17bd62675660.PNG)
